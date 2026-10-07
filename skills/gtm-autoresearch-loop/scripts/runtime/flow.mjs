@@ -39,4 +39,209 @@ function eventName(raw, tag) {
 
 function webSenders(W) {
   const constants = new Map((W.variable ?? []).filter(v => v.type === 'c').map(v => [v.name, param(v, 'value')]));
-  const resolve = v => { const m = /^\{\{([^{}]+)Ûn¼¶‰žËkºwµçl(€€€¹½‘”¡‘Ìè‘í‘•ÍÑõ€°ì­¥¹è€‘•ÍÐœ°½°è€Ü°É•˜è‘•ÍÐ°¹…µ”è‘•ÍÐ°ÑåÁ”è€‘•ÍÑ¥¹…Ñ¥½¸œ°Í¥‘”è€½ÕÐœô¤ì(€€€™½È€¡½¹ÍÐÑÈ½˜Ð¹™¥É¥¹QÉ¥•É%€üümt¤¥˜€¡ÍQÉ¥œ¹¡…Ì¡ÑÈ¤¤•‘”¡ÍÑÈè‘íÑÉõ€°ÍÑœè‘íÐ¹Ñ…%‘õ€°€™¥É•Ìœ°€¥‘±”œ¤ì(€€€•‘”¡ÍÑœè‘íÐ¹Ñ…%‘õ€°‘Ìè‘í‘•ÍÑõ€°€‘•±¥Ù•ÉÌœ°€¥‘±”œ¤ì(€ô(€½¹ÍÐÍ¥¹¬€ô¹½‘” Í¥¹¬œ°ì­¥¹è€Í¥¹¬œ°½°è€Ô°É•˜è€ŸŠPœ°¹…µ”è€9¼Í•ÉÙ•ÈÑÉ¥•Èµ…Ñ¡•Ìœ°ÑåÁ”è€‘•…•¹œ°Í¥‘”è€Í•ÉÙ•Èœô¤ì((€™½È€¡½¹ÍÐÌ½˜Í•¹‘•ÉÌ¤ì(€€€½¹ÍÐÝÐ€ô¹½‘”¡ÝÑœè‘íÌ¹Ñ…œ¹Ñ…%‘õ€°ì­¥¹è€ÝÑ…œœ°½°è€Ä°É•˜èÌ¹Ñ…œ¹Ñ…%°¹…µ”èÌ¹Ñ…œ¹¹…µ”°ÑåÁ”èì‘…Ñ„è€MÑ…Á”…Ñ„Q…œœ°¡ÑÑÀè€!QQ@É•ÅÕ•ÍÐœ°„Ðè€ÐÙ¥„Í•ÉÙ•É}½¹Ñ…¥¹•É}ÕÉ°œõmÌ¹ÑÉ…¹ÍÁ½ÉÑt°Í¥‘”è€Ý•ˆœô¤ì(€€€½¹ÍÐ™¥É¥¹œ€ô€¡Ì¹Ñ…œ¹™¥É¥¹QÉ¥•É%€üümt¤¹µ…À¡¥€ôøÝQÉ¥œ¹•Ð¡¥¤ü¹¹…µ”€üü€¡ì€œÈÄÐÜÐÜäÔÔÌœè€±°A…•Ìœ°€œÈÄÐÜÐÜäÔÜÈœè€½¹Í•¹Ð%¹¥Ñ¥…±¥é…Ñ¥½¸œ°€œÈÄÐÜÐÜäÔÜÌœè€%¹¥Ñ¥…±¥é…Ñ¥½¸œõm¥‘t€üü¥¤¤ì(€€€™½È€¡½¹ÍÐ¥½˜Ì¹Ñ…œ¹™¥É¥¹QÉ¥•É%€üümt¤ì¹½‘”¡ÝÑÈè‘í¥‘õ€°ì­¥¹è€ÝÑÉ¥•Èœ°½°è€À°É•˜è¥°¹…µ”èÝQÉ¥œ¹•Ð¡¥¤ü¹¹…µ”€üü™¥É¥¹lÁt°ÑåÁ”èÝQÉ¥œ¹•Ð¡¥¤ü¹ÑåÁ”€üü€‰Õ¥±Ðµ¥¸ÑÉ¥•Èœ°Í¥‘”è€Ý•ˆœô¤ì•‘”¡ÝÑÈè‘í¥‘õ€°ÝÐ¹¥°€™¥É•Ìœ°€½¬œ¤ìô(€€€½¹ÍÐ•À€ô¹½‘”¡•Àè‘íÌ¹¡½ÍÐ€üü€Õ¹­¹½Ý¸õ€°ì­¥¹è€•¹‘Á½¥¹Ðœ°½°è€È°É•˜èÌ¹¡½ÍÐ€üü€œüœ°¹…µ”èÌ¹¡½ÍÐ€üü€U¹É•Í½±Ù••¹‘Á½¥¹Ðœ°ÑåÁ”è€Í•ÉÙ•È½¹Ñ…¥¹•È•¹‘Á½¥¹Ðœ°Í¥‘”è€•‘”œô¤ì(€€€½¹ÍÐì±¥•¹Ð°Ñ¥•ô€ô±…¥´¡±¥•¹ÑÌ°Ì¤ì(€€€½¹ÍÐ•Ø€ô¹½‘”¡•Øè‘íÌ¹•Ù•¹Ð€üü€œüœ€¬Ì¹Ñ…œ¹Ñ…%‘õ€°ì­¥¹è€•Ù•¹Ðœ°½°è€Ð°É•˜èÌ¹•Ù•¹Ð€üüÌ¹É…ÝÙ•¹Ð€üü€œüœ°¹…µ”èÌ¹•Ù•¹Ð€üü€‘íÌ¹É…ÝÙ•¹Ð€üü€Õ¹­¹½Ý¸ô€¡‘å¹…µ¥Œ¥€°ÑåÁ”è€•Ù•¹Ð¹…µ”œ°Í¥‘”è€Í•ÉÙ•Èœô¤ì(€€€½¹ÍÐÉ½ÕÑ”€ôì¥èÈ‘íÉ½ÕÑ•Ì¹±•¹Ñ¡õ€°Ý•‰Q…œèÝÐ¹¥°Ý•‰QÉ¥•ÉÌè€¡Ì¹Ñ…œ¹™¥É¥¹QÉ¥•É%€üümt¤¹µ…À¡¥€ôøÝÑÈè‘í¥‘õ€¤°™¥É¥¹œ°•¹‘Á½¥¹Ðè•À¹¥°•Ù•¹ÐèÌ¹•Ù•¹Ð°•Ù•¹Ñ9½‘”è•Ø¹¥°ÑÉ…¹ÍÁ½ÉÐèÌ¹ÑÉ…¹ÍÁ½ÉÐ°(€€€€€±¥•¹Ðè±¥•¹Ð€ü°è‘í±¥•¹Ð¹Œ¹±¥•¹Ñ%‘õ€€è¹Õ±°°µ…Ñ¡•èmt°Ñ…Ìèmt°‘•ÍÑ¥¹…Ñ¥½¹Ìèmt°ÍÑ…ÑÕÌè€Õ¹­¹½Ý¸œôì(€€€¥˜€ …±¥•¹ÐñðÌ¹•Ù•¹Ð€ôô¹Õ±°¤ì(€€€€€É½ÕÑ”¹ÍÑ…ÑÕÌ€ô€Õ¹­¹½Ý¸œì(€€€€€É½ÕÑ”¹É•…Í½¸€ô€…±¥•¹Ð€ü€9¼Í•ÉÙ•È±¥•¹Ð½˜Ñ¡”É¥¡Ð­¥¹Ñ¼±…¥´Ñ¡¥ÌÉ•ÅÕ•ÍÐ¸œ€è€Q¡”•Ù•¹Ð¹…µ”¥ÌÍ•Ð…ÐÉÕ¸Ñ¥µ”°Í¼¥Ð…¹¹½Ð‰”µ…Ñ¡•ÍÑ…Ñ¥…±±ä¸œì(€€€ô•±Í”ì(€€€€€€¼¼]¡•¸Í•Ù•É…°±¥•¹ÑÌ½Õ±±…¥´Ñ¡”É•ÅÕ•ÍÐ°„ÑÉ¥•È¥Ì•ÉÑ…¥¸½¹±ä¥˜¥Ðµ…Ñ¡•Ì™½È…±°½˜Ñ¡•´¸(€€€€€™½È€¡½¹ÍÐÐ½˜L¹ÑÉ¥•È€üümt¤ì(€€€€€€€½¹ÍÐÉÌ€ôÑ¥•¹µ…À¡à€ôø•Ù…±Õ…Ñ”¡Ð°Ì¹•Ù•¹Ð°à¹Œ¹¹…µ”°•Ù•¹ÑY…ÉÌ¤¤ì(€€€€€€€½¹ÍÐÈ€ôÉÌ¹•Ù•Éä¡à€ôøà€ôôô€å•Ìœ¤€ü€å•Ìœ€èÉÌ¹•Ù•Éä¡à€ôøà€ôôô€¹¼œ¤€ü€¹¼œ€è€µ…å‰”œì(€€€€€€€¥˜€¡È€„ôô€¹¼œ¤É½ÕÑ”¹µ…Ñ¡•¹ÁÕÍ ¡ì¥èÍÑÈè‘íÐ¹ÑÉ¥•É%‘õ€°•ÉÑ…¥¹ÑäèÈô¤ì(€€€€€ô(€€€€€½¹ÍÐµ…Ñ¡•€ô¹•Ü5…À¡É½ÕÑ”¹µ…Ñ¡•¹µ…À¡´€ôøm´¹¥°´¹•ÉÑ…¥¹Ñåt¤¤ì(€€€€€™½È€¡½¹ÍÐÐ½˜L¹Ñ…œ€üümt¤ì(€€€€€€€¥˜€¡Ð¹Á…ÕÍ•¤½¹Ñ¥¹Õ”ì(€€€€€€€½¹ÍÐ¡¥ÑÌ€ô€¡Ð¹™¥É¥¹QÉ¥•É%€üümt¤¹µ…À¡¥€ôøµ…Ñ¡•¹•Ð¡ÍÑÈè‘í¥‘õ€¤¤¹™¥±Ñ•È¡	½½±•…¸¤ì(€€€€€€€¥˜€¡¡¥ÑÌ¹±•¹Ñ ¤É½ÕÑ”¹Ñ…Ì¹ÁÕÍ ¡ì¥èÍÑœè‘íÐ¹Ñ…%‘õ€°•ÉÑ…¥¹Ñäè¡¥ÑÌ¹¥¹±Õ‘•Ì å•Ìœ¤€ü€å•Ìœ€è€µ…å‰”œ°‘•ÍÑ¥¹…Ñ¥½¸èÁ±…Ñ™½Éµ=˜¡L°Ð¤ô¤ì(€€€€€ô(€€€€€É½ÕÑ”¹‘•ÍÑ¥¹…Ñ¥½¹Ì€ôl¸¸¹¹•ÜM•Ð¡É½ÕÑ”¹Ñ…Ì¹µ…À¡Ð€ôøÐ¹‘•ÍÑ¥¹…Ñ¥½¸¤¥tì(€€€€€É½ÕÑ”¹ÍÑ…ÑÕÌ€ôÉ½ÕÑ”¹Ñ…Ì¹Í½µ”¡Ð€ôøÐ¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ¤€ü€‘•±¥Ù•É•œ€èÉ½ÕÑ”¹Ñ…Ì¹±•¹Ñ €ü€½¹‘¥Ñ¥½¹…°œ€è€‘•…µ•¹œì(€€€€€¥˜€¡Ñ¥•¹±•¹Ñ €ø€Ä¤É½ÕÑ”¹É•…Í½¸€ô€‘íÑ¥•¹µ…À¡à€ôøà¹Œ¹¹…µ”¤¹©½¥¸ œ…¹€œ¥ô¡…Ù”Ñ¡”Í…µ”ÁÉ¥½É¥Ñä°Í¼Ý¡¥ ½¹”±…¥µÌÑ¡”É•ÅÕ•ÍÐ¥Ì¹½Ð•ÉÑ…¥¸¸QÉ¥•ÉÌÑ¡…Ð¡•¬±¥•¹Ð9…µ”…É”µ…É­•Õ¹•ÉÑ…¥¸¹€ì(€€€ô(€€€½¹ÍÐÍÐ€ôì‘•±¥Ù•É•è€½¬œ°½¹‘¥Ñ¥½¹…°è€µ…å‰”œ°€‘•…µ•¹œè€‘•…œ°Õ¹­¹½Ý¸è€Õ¹­¹½Ý¸œõmÉ½ÕÑ”¹ÍÑ…ÑÕÍtì(€€€•‘”¡ÝÐ¹¥°•À¹¥°€Í•¹‘Ìœ°ÍÐ¤ì(€€€¥˜€¡É½ÕÑ”¹±¥•¹Ð¤ì•‘”¡•À¹¥°É½ÕÑ”¹±¥•¹Ð°€É½ÕÑ•Ìœ°ÍÐ¤ì•‘”¡É½ÕÑ”¹±¥•¹Ð°•Ø¹¥°€±…¥µÌœ°ÍÐ¤ìô(€€€•±Í”•‘”¡•À¹¥°•Ø¹¥°€É½ÕÑ•Ìœ°€Õ¹­¹½Ý¸œ¤ì(€€€™½È€¡½¹ÍÐ´½˜É½ÕÑ”¹µ…Ñ¡•¤•‘”¡•Ø¹¥°´¹¥°€µ…Ñ¡•Ìœ°´¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ€˜˜É½ÕÑ”¹Ñ…Ì¹±•¹Ñ €üÍÐ€è€µ…å‰”œ¤ì(€€€¥˜€¡É½ÕÑ”¹ÍÑ…ÑÕÌ€ôôô€‘•…µ•¹œ¤•‘”¡•Ø¹¥°Í¥¹¬¹¥°€µ…Ñ¡•Ìœ°€‘•…œ¤ì(€€€™½È€¡½¹ÍÐÐ½˜É½ÕÑ”¹Ñ…Ì¤ì(€€€€€½¹ÍÐ™¥É•Ì€ô¹•ÜM•Ð ¡L¹Ñ…œ€üümt¤¹™¥¹¡à€ôøÍÑœè‘íà¹Ñ…%‘õ€€ôôôÐ¹¥¤ü¹™¥É¥¹QÉ¥•É%€üümt¤ì(€€€€€™½È€¡½¹ÍÐ´½˜É½ÕÑ”¹µ…Ñ¡•¤¥˜€¡™¥É•Ì¹¡…Ì¡´¹¥¹Í±¥” Ð¤¤¤•‘”¡´¹¥°Ð¹¥°€™¥É•Ìœ°´¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ€˜˜Ð¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ€üÍÐ€è€µ…å‰”œ¤ì(€€€€€•‘”¡Ð¹¥°‘Ìè‘íÐ¹‘•ÍÑ¥¹…Ñ¥½¹õ€°€‘•±¥Ù•ÉÌœ°Ð¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ€üÍÐ€è€µ…å‰”œ¤ì(€€€ô(€€€É½ÕÑ•Ì¹ÁÕÍ ¡É½ÕÑ”¤ì(€ô((€€¼¼¥¹‘¥¹Ì‘É…Ý¸™É½´Ñ¡”É½ÕÑ•Ì¸(€½¹ÍÐ™¥¹‘¥¹Ì€ômtì(€½¹ÍÐ…‘€ô€¡Í•Ù•É¥Ñä°Ñ…É•Ð°µ•ÍÍ…”°É•±…Ñ•€ômt¤€ôøì™¥¹‘¥¹Ì¹ÁÕÍ ¡ìÍ•Ù•É¥Ñä°Ñ…É•Ð°µ•ÍÍ…”°É•±…Ñ•ô¤ì™±…œ¡¹½‘•Ì¹•Ð¡Ñ…É•Ð¤°Í•Ù•É¥Ñä°µ•ÍÍ…”¤ìôì(€™½È€¡½¹ÍÐÈ½˜É½ÕÑ•Ì¹™¥±Ñ•È¡È€ôøÈ¹ÍÑ…ÑÕÌ€ôôô€‘•…µ•¹œ¤¤ì(€€€½¹ÍÐ¹•…È€ô€¡L¹ÑÉ¥•È€üümt¤¹™¥±Ñ•È¡Ð€ôø‘•ÍÉ¥‰•QÉ¥•È¡Ð¤¹Ñ½1½Ý•É…Í” ¤¹¥¹±Õ‘•Ì¡MÑÉ¥¹œ¡È¹•Ù•¹Ð¤¹Ñ½1½Ý•É…Í” ¤¹Í±¥” À°€Ð¤¤¤¹µ…À¡Ð€ôøÐ¹¹…µ”¤ì(€€€…‘ É•Ù¥•Üœ°È¹Ý•‰Q…œ°M•¹‘Ì€ˆ‘íÈ¹•Ù•¹ÑôˆÑ¼Ñ¡”Í•ÉÙ•È°‰ÕÐ¹¼Í•ÉÙ•ÈÑÉ¥•Èµ…Ñ¡•ÌÑ¡…Ð•Ù•¹Ð¹…µ”°Í¼¹½Ñ¡¥¹œ¥Ì™½ÉÝ…É‘•¸‘í¹•…È¹±•¹Ñ €ü€±½Í•ÍÐÍ•ÉÙ•ÈÑÉ¥•Èè€‘í¹•…ÉlÁuô¹€€è€œõ€°mÈ¹•Ù•¹Ñ9½‘•t¤ì(€€€™±…œ¡¹½‘•Ì¹•Ð¡È¹•Ù•¹Ñ9½‘”¤°€É•Ù¥•Üœ°9¼Í•ÉÙ•ÈÑÉ¥•Èµ…Ñ¡•Ì€ˆ‘íÈ¹•Ù•¹Ñôˆ¹€¤ì(€ô(€½¹ÍÐÉ•…¡•€ô¹•ÜM•Ð¡É½ÕÑ•Ì¹™±…Ñ5…À¡È€ôøÈ¹Ñ…Ì¹µ…À¡Ð€ôøÐ¹¥¤¤¤ì(€™½È€¡½¹ÍÐÐ½˜L¹Ñ…œ€üümt¤ì(€€€½¹ÍÐ¥€ôÍÑœè‘íÐ¹Ñ…%‘õ€ì(€€€¥˜€¡Ð¹Á…ÕÍ•ñðÉ•…¡•¹¡…Ì¡¥¤¤½¹Ñ¥¹Õ”ì(€€€½¹ÍÐÝ…¹Ð€ô€¡Ð¹™¥É¥¹QÉ¥•É%€üümt¤¹µ…À¡à€ôøÍQÉ¥œ¹•Ð¡à¤¤¹™¥±Ñ•È¡	½½±•…¸¤¹µ…À¡à€ôø€‘íà¹¹…µ•ô€ ‘í‘•ÍÉ¥‰•QÉ¥•È¡à¥ô¥€¤ì(€€€…‘ É•Ù¥•Üœ°¥°9¼•Ù•¹Ð™É½´Ñ¡¥ÌÝ•ˆ½¹Ñ…¥¹•ÈÉ•…¡•ÌÑ¡¥ÌÑ…œ¸%ÐÝ…¥ÑÌ™½È€‘íÝ…¹Ð¹©½¥¸ œ½È€œ¤ñð€¹¼ÑÉ¥•Èô°Ý¡¥ ¹¼Ý•ˆÑ…œÍ•¹‘Ì¸Ù•¹ÑÌ™É½´½Ñ¡•ÈÍ½ÕÉ•Ì€¡…ÁÁÌ°½Ñ¡•È½¹Ñ…¥¹•ÉÌ¤…É”¹½ÐÙ¥Í¥‰±”¡•É”¹€¤ì(€ô(€½¹ÍÐÕÍ•‘QÉ¥•ÉÌ€ô¹•ÜM•Ð ¡L¹Ñ…œ€üümt¤¹™¥±Ñ•È¡Ð€ôø€…Ð¹Á…ÕÍ•¤¹™±…Ñ5…À¡Ð€ôøÐ¹™¥É¥¹QÉ¥•É%€üümt¤¤ì(€½¹ÍÐÕ¹ÕÍ•‘!¥ÑÌ€ô¹•Ü5…À ¤ì(€™½È€¡½¹ÍÐÈ½˜É½ÕÑ•Ì¤™½È€¡½¹ÍÐ´½˜È¹µ…Ñ¡•¤¥˜€¡´¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ€˜˜€…ÕÍ•‘QÉ¥•ÉÌ¹¡…Ì¡´¹¥¹Í±¥” Ð¤¤¤Õ¹ÕÍ•‘!¥ÑÌ¹Í•Ð¡´¹¥°¹•ÜM•Ð¡l¸¸¹Õ¹ÕÍ•‘!¥ÑÌ¹•Ð¡´¹¥¤€üümt°È¹•Ù•¹Ñt¤¤ì(€™½È€¡½¹ÍÐm¥°•ÙÍt½˜Õ¹ÕÍ•‘!¥ÑÌ¤…‘ ¥¹™¼œ°¥°5…Ñ¡•Ì€‘íl¸¸¹•ÙÍt¹µ…À¡”€ôø€ˆ‘í•ô‰€¤¹©½¥¸ œ°€œ¥ô™É½´Ñ¡”Ý•ˆ½¹Ñ…¥¹•È°‰ÕÐ¹¼…Ñ¥Ù”Í•ÉÙ•ÈÑ…œÕÍ•ÌÑ¡¥ÌÑÉ¥•È¹€¤ì(€€¼¼M•Ù•É…°Ý•ˆÑ…Ì™¥É¥¹œ½¸Ñ¡”Í…µ”ÑÉ¥•È…¹É•…¡¥¹œÑ¡”Í…µ”Í•ÉÙ•ÈÑ…œ¸(€€¼¼U¹™¥±Ñ•É•Á…”µ±½…ÑÉ¥•ÉÌ€¡±°A…•Ì°=4I•…‘ä°]¥¹‘½Ü1½…‘•¤…±°™¥É”½¹”Á•ÈÁ…”Ù¥•Ü¸(€½¹ÍÐÁ…•1½…€ô¥€ôø11}AL¹¡…Ì¡¥¤ñð€ ¡Ð€ôøÐ€˜˜lAY%\œ°€=5}Idœ°€]%9=]}1=t¹¥¹±Õ‘•Ì¡MÑÉ¥¹œ¡Ð¹ÑåÁ”¤¹Ñ½UÁÁ•É…Í” ¤¤€˜˜€„¡Ð¹™¥±Ñ•È€üümt¤¹±•¹Ñ €˜˜€„¡Ð¹…ÕÑ½Ù•¹Ñ¥±Ñ•È€üümt¤¹±•¹Ñ ¤¡ÝQÉ¥œ¹•Ð¡¥¤¤¤ì(€½¹ÍÐµ½µ•¹Ð€ôÜ€ôøÁ…•1½…¡Ü¹Í±¥” Ð¤¤€ü€•Ù•ÉäÁ…”Ù¥•Üœ€è€ˆ‘í¹½‘•Ì¹•Ð¡Ü¤¹¹…µ•ô‰€ì(€½¹ÍÐ‰åQ…œ€ô¹•Ü5…À ¤ì(€™½È€¡½¹ÍÐÈ½˜É½ÕÑ•Ì¹™¥±Ñ•È¡È€ôøÈ¹ÍÑ…ÑÕÌ€ôôô€‘•±¥Ù•É•œ¤¤™½È€¡½¹ÍÐÐ½˜È¹Ñ…Ì¹™¥±Ñ•È¡Ð€ôøÐ¹•ÉÑ…¥¹Ñä€ôôô€å•Ìœ¤¤™½È€¡½¹ÍÐÜ½˜È¹Ý•‰QÉ¥•ÉÌ¤ì(€€€½¹ÍÐ¬€ô€‘íÐ¹¥‘õð‘íµ½µ•¹Ð¡Ü¥õ€ì‰åQ…œ¹Í•Ð¡¬°l¸¸¹‰åQ…œ¹•Ð¡¬¤€üümt°Ét¤ì(€ô(€™½È€¡½¹ÍÐm¬°ÉÍt½˜‰åQ…œ¤ì(€€€½¹ÍÐmÑ…%°Ý¡•¹t€ôm¬¹Í±¥” À°¬¹¥¹‘•á=˜ ðœ¤¤°¬¹Í±¥”¡¬¹¥¹‘•á=˜ ðœ¤€¬€Ä¥t°Õ¹¥Ä€ôl¸¸¹¹•ÜM•Ð¡ÉÌ¹µ…À¡È€ôøÈ¹Ý•‰Q…œ¤¥tì(€€€¥˜€¡Õ¹¥Ä¹±•¹Ñ €ð€È¤½¹Ñ¥¹Õ”ì(€€€…‘ É•Ù¥•Üœ°Ñ…%°…¸™¥É”€‘íÕ¹¥Ä¹±•¹Ñ¡ôÑ¥µ•Ì½¸€‘íÝ¡•¹ôè€‘íÕ¹¥Ä¹µ…À¡¥€ôø¹½‘•Ì¹•Ð¡¥¤¹¹…µ”¤¹©½¥¸ œ°€œ¥ô…±°É•… ¥Ð¸¡•¬Ñ¡•äÍ¡…É”…¸•Ù•¹Ð%Í¼€‘í¹½‘•Ì¹•Ð¡Ñ…%¤¹ÑåÁ•ô‘•‘ÕÁ±¥…Ñ•Ì¹€°Õ¹¥Ä¤ì(€ô(€™½È€¡½¹ÍÐà½˜±¥•¹ÑÌ¹™¥±Ñ•È¡à€ôøà¹É½±”€ôôô€„Ðœ€˜˜€…É½ÕÑ•Ì¹Í½µ”¡È€ôøÈ¹±¥•¹Ð€ôôô°è‘íà¹Œ¹±¥•¹Ñ%‘õ€¤¤¤…‘ ¥¹™¼œ°°è‘íà¹Œ¹±¥•¹Ñ%‘õ€°€9¼Ý•ˆÑ…œ¥¸Ñ¡¥Ì½¹Ñ…¥¹•ÈÍ•¹‘ÌÐÑÉ…™™¥ŒÑ¼Ñ¡¥Ì±¥•¹Ð¸œ¤ì((€€¼¼=É‘•ÈÉ½ÝÌ¥¸•… ½±Õµ¸‰äÑ¡”…Ù•É…”É½Ü½˜Ý¡…Ð™••‘ÌÑ¡•´¸(€½¹ÍÐ±¥ÍÐ€ôl¸¸¹¹½‘•Ì¹Ù…±Õ•Ì ¥t°É½Ü€ô¹•Ü5…À ¤°½±Ì€ôl¸¸¹¹•ÜM•Ð¡±¥ÍÐ¹µ…À¡¸€ôø¸¹½°¤¥t¹Í½ÉÐ ¡„°ˆ¤€ôø„€´ˆ¤ì(€½¹ÍÐ¥¹‘•Ì€ô¥€ôøl¸¸¹•‘•Ì¹Ù…±Õ•Ì ¥t¹™¥±Ñ•È¡”€ôø”¹Ñ¼€ôôô¥¤ì(€™½È€¡½¹ÍÐŒ½˜½±Ì¤ì(€€€½¹ÍÐ½°€ô±¥ÍÐ¹™¥±Ñ•È¡¸€ôø¸¹½°€ôôôŒ¤ì(€€€½¹ÍÐÍ½É”€ô¸€ôøì½¹ÍÐÁÌ€ô¥¹‘•Ì¡¸¹¥¤¹µ…À¡”€ôøÉ½Ü¹•Ð¡”¹™É½´¤¤¹™¥±Ñ•È¡Ø€ôøØ€„ô¹Õ±°¤ìÉ•ÑÕÉ¸ÁÌ¹±•¹Ñ €üÁÌ¹É•‘Õ” ¡„°ˆ¤€ôø„€¬ˆ°€À¤€¼ÁÌ¹±•¹Ñ €è€Å”Øìôì(€€€½°¹µ…À¡¸€ôøm¸°¸¹­¥¹€ôôô€Í¥¹¬œ€ü€É”Ø€èÍ½É”¡¸¥t¤¹Í½ÉÐ ¡„°ˆ¤€ôø…lÅt€´‰lÅtñð…lÁt¹¹…µ”¹±½…±•½µÁ…É”¡‰lÁt¹¹…µ”¤¤¹™½É…  ¡m¹t°¤¤€ôøìÉ½Ü¹Í•Ð¡¸¹¥°¤¤ì¸¹É½Ü€ô¤ìô¤ì(€ô(€½¹ÍÐ½Õ¹Ð€ôÌ€ôøÉ½ÕÑ•Ì¹™¥±Ñ•È¡È€ôøÈ¹ÍÑ…ÑÕÌ€ôôôÌ¤¹±•¹Ñ ì(€É•ÑÕÉ¸ì(€€€µ•Ñ„èì¹…µ”è€‘í\¹½¹Ñ…¥¹•Èü¹ÁÕ‰±¥%€üü€]•ˆôƒŠH€‘íL¹½¹Ñ…¥¹•Èü¹ÁÕ‰±¥%€üü€M•ÉÙ•Èõ€°ÁÕ‰±¥%è€M¥¹…°™±½Üœ°½¹Ñ•áÐè€Ý•ˆÑ¼Í•ÉÙ•Èœ°Á…¥É•èÁ…¥ÉÌ¡Ý•‰M¹…À°Í•ÉÙ•ÉM¹…À¤°¡½ÍÑÌèl¸¸¹¹•ÜM•Ð¡Í•¹‘•ÉÌ¹µ…À¡Ì€ôøÌ¹¡½ÍÐ¤¹™¥±Ñ•È¡	½½±•…¸¤¥tô°(€€€½±Õµ¹Ìèl]•ˆÑÉ¥•ÉÌœ°€]•ˆÑ…Ìœ°€¹‘Á½¥¹Ðœ°€M•ÉÙ•È±¥•¹ÑÌœ°€Ù•¹ÑÌœ°€M•ÉÙ•ÈÑÉ¥•ÉÌœ°€M•ÉÙ•ÈÑ…Ìœ°€•ÍÑ¥¹…Ñ¥½¹Ìt°(€€€¹½‘•Ìè±¥ÍÐ¹Í½ÉÐ ¡„°ˆ¤€ôø„¹½°€´ˆ¹½°ñð„¹É½Ü€´ˆ¹É½Ü¤°•‘•Ìèl¸¸¹•‘•Ì¹Ù…±Õ•Ì ¥t°É½ÕÑ•Ì°™¥¹‘¥¹Ì°(€€€ÍÕµµ…ÉäèìÉ½ÕÑ•ÌèÉ½ÕÑ•Ì¹±•¹Ñ °‘•±¥Ù•É•è½Õ¹Ð ‘•±¥Ù•É•œ¤°½¹‘¥Ñ¥½¹…°è½Õ¹Ð ½¹‘¥Ñ¥½¹…°œ¤°‘•…è½Õ¹Ð ‘•…µ•¹œ¤°Õ¹­¹½Ý¸è½Õ¹Ð Õ¹­¹½Ý¸œ¤°½ÉÁ¡…¹Ìè™¥¹‘¥¹Ì¹™¥±Ñ•È¡˜€ôø˜¹µ•ÍÍ…”¹ÍÑ…ÉÑÍ]¥Ñ  9¼•Ù•¹Ð™É½´œ¤¤¹±•¹Ñ ô°(€ôì)ô(
+  const resolve = v => { const m = /^\{\{([^{}]+)\}\}$/.exec(v ?? ''); return m && constants.has(m[1]) ? constants.get(m[1]) : v; };
+  const out = [], ga4Routed = new Map();
+  for (const t of W.tag ?? []) {
+    if (t.type !== 'googtag') continue;
+    const cfg = table(t, 'configSettingsTable'), su = cfg.find(r => r.parameter === 'server_container_url')?.parameterValue ?? param(t, 'server_container_url');
+    const url = urlOf(su, constants);
+    if (!url) continue;
+    const id = resolve(param(t, 'tagId'));
+    if (id) ga4Routed.set(id, url.host);
+    if (cfg.find(r => r.parameter === 'send_page_view')?.parameterValue !== 'false') out.push({ tag: t, event: 'page_view', host: url.host, transport: 'ga4' });
+  }
+  for (const t of W.tag ?? []) {
+    if (t.paused) continue;
+    const domain = param(t, 'gtm_server_domain');
+    if (domain) {
+      const ev = param(t, 'event_type') === 'custom' ? param(t, 'event_name_custom') : param(t, 'event_name_standard') ?? param(t, 'event_name');
+      const url = urlOf(domain, constants);
+      out.push({ tag: t, event: eventName(ev, t), rawEvent: ev ?? null, host: url?.host ?? null, transport: 'data' });
+      continue;
+    }
+    if (t.type === 'gaawe') {
+      const id = resolve(param(t, 'measurementIdOverride') ?? param(t, 'measurementId'));
+      if (id && ga4Routed.has(id)) out.push({ tag: t, event: eventName(param(t, 'eventName'), t), rawEvent: param(t, 'eventName') ?? null, host: ga4Routed.get(id), transport: 'ga4' });
+      continue;
+    }
+    if (t.type === 'html') {
+      // Read the script only to find where it posts and which event name it sends.
+      const html = String(param(t, 'html') ?? '');
+      const arg = String.raw`(['"\x60]?)(\{\{[^{}]+\}\}[^'"\x60,)\s]*|[^'"\x60,)\s]+)\1`;
+      const target = new RegExp(String.raw`(?:fetch|sendBeacon)\(\s*` + arg).exec(html) ?? new RegExp(String.raw`\.open\(\s*['"][A-Z]+['"]\s*,\s*` + arg).exec(html);
+      const url = target && urlOf(target[2], constants);
+      if (!url || !/^https?:/.test(url.protocol)) continue;
+      const ev = /event_name['"]?\s*:\s*['"`]([^'"`]+)['"`]/.exec(html)?.[1] ?? null;
+      out.push({ tag: t, event: eventName(ev, t), rawEvent: ev, host: url.host, path: url.pathname, transport: 'http' });
+    }
+  }
+  return out;
+}
+
+function serverClients(S) {
+  return (S.client ?? []).map(c => {
+    const tmpl = templateName(S, c.type) ?? '';
+    const role = c.type === 'gaaw_client' ? 'ga4' : c.type === 'gtm_client' ? 'container' : /data client/i.test(`${tmpl} ${c.name}`) ? 'data' : 'other';
+    return { c, role, priority: Number(param(c, 'priority') ?? c.priority ?? 0) || 0, serves: params(c).flatMap(p => (p.list ?? []).flatMap(r => (r.map ?? []).filter(m => m.key === 'containerId').map(m => m.value))) };
+  });
+}
+
+// Which client claims a request: highest priority among clients of the matching role.
+function claim(clients, sender) {
+  const role = sender.transport === 'ga4' ? 'ga4' : sender.transport === 'data' || /\/data\/?$/.test(sender.path ?? '') ? 'data' : null;
+  if (!role) return { client: null, tied: [] };
+  const list = clients.filter(x => x.role === role).sort((a, b) => b.priority - a.priority);
+  if (!list.length) return { client: null, tied: [] };
+  return { client: list[0], tied: list.filter(x => x.priority === list[0].priority) };
+}
+
+const OPS = {
+  EQUALS: (v, a) => v === a, CONTAINS: (v, a) => v.includes(a), STARTS_WITH: (v, a) => v.startsWith(a), ENDS_WITH: (v, a) => v.endsWith(a),
+  MATCH_REGEX: (v, a, i) => new RegExp(a, i ? 'i' : '').test(v),
+};
+
+export function evaluate(trigger, event, clientName, eventVars) {
+  if (!['ALWAYS', 'CUSTOM_EVENT'].includes(String(trigger.type).toUpperCase())) return 'maybe';
+  let result = 'yes';
+  for (const cond of [...trigger.filter ?? [], ...trigger.customEventFilter ?? []]) {
+    const arg0 = String(param(cond, 'arg0') ?? ''), arg1 = String(param(cond, 'arg1') ?? ''), m = /^\{\{([^{}]+)\}\}$/.exec(arg0);
+    const name = m?.[1], value = name && eventVars.has(name) ? event : name === 'Client Name' ? clientName : undefined;
+    const op = OPS[String(cond.type).toUpperCase()];
+    if (value == null || !op) { result = 'maybe'; continue; }
+    let hit;
+    try { hit = op(String(value), arg1, param(cond, 'ignore_case') === 'true'); } catch { result = 'maybe'; continue; }
+    if (param(cond, 'negate') === 'true') hit = !hit;
+    if (!hit) return 'no';
+  }
+  return result;
+}
+
+export function describeTrigger(trigger) {
+  const conds = [...trigger.filter ?? [], ...trigger.customEventFilter ?? []].map(c => {
+    const a0 = String(param(c, 'arg0') ?? '').replace(/^\{\{|\}\}$/g, ''), op = String(c.type).toLowerCase().replace('_', ' ').replace('match regex', 'matches');
+    return `${param(c, 'negate') === 'true' ? 'not ' : ''}${a0} ${op} ${param(c, 'arg1') ?? ''}`.trim();
+  });
+  return conds.length ? conds.join(' and ') : String(trigger.type).toLowerCase();
+}
+
+export function pairs(webSnap, serverSnap) {
+  const W = cv(webSnap), S = cv(serverSnap), pub = W.container?.publicId;
+  return serverClients(S).some(x => x.role === 'container' && x.serves.includes(pub));
+}
+
+export function signalFlow(webSnap, serverSnap) {
+  const W = cv(webSnap), S = cv(serverSnap);
+  const clients = serverClients(S), senders = webSenders(W);
+  const eventVars = new Set(['Event Name', '_event', ...(S.variable ?? []).filter(v => v.type === 'ed' && param(v, 'keyPath') === 'event_name').map(v => v.name)]);
+  const sTrig = new Map((S.trigger ?? []).map(t => [t.triggerId, t])), wTrig = new Map((W.trigger ?? []).map(t => [t.triggerId, t]));
+  const nodes = new Map(), edges = new Map(), routes = [];
+  const node = (id, n) => (nodes.has(id) || nodes.set(id, { id, findings: [], risk: null, ...n }), nodes.get(id));
+  const edge = (from, to, kind, status) => { const k = `${from}>${to}>${kind}`, e = edges.get(k); if (!e) edges.set(k, { from, to, kind, status }); else if (rank(status) > rank(e.status)) e.status = status; };
+  const rank = s => ({ idle: 0, unknown: 1, dead: 2, maybe: 3, ok: 4 }[s] ?? 0);
+  const flag = (n, severity, message) => { n.findings.push({ severity, message }); if (!n.risk || severity === 'critical' || (severity === 'review' && n.risk === 'info')) n.risk = severity; };
+
+  // Server side is drawn in full so idle pieces are visible.
+  for (const x of clients) node(`cl:${x.c.clientId}`, { kind: 'client', col: 3, ref: x.c.clientId, name: x.c.name, type: x.c.type + (x.priority ? ` Â· priority ${x.priority}` : ''), side: 'server' });
+  for (const t of S.trigger ?? []) node(`str:${t.triggerId}`, { kind: 'strigger', col: 5, ref: t.triggerId, name: t.name, type: describeTrigger(t), side: 'server' });
+  for (const t of S.tag ?? []) {
+    const dest = platformOf(S, t);
+    node(`stg:${t.tagId}`, { kind: 'stag', col: 6, ref: t.tagId, name: t.name, type: dest, side: 'server', paused: !!t.paused });
+    node(`ds:${dest}`, { kind: 'dest', col: 7, ref: dest, name: dest, type: 'destination', side: 'out' });
+    for (const tr of t.firingTriggerId ?? []) if (sTrig.has(tr)) edge(`str:${tr}`, `stg:${t.tagId}`, 'fires', 'idle');
+    edge(`stg:${t.tagId}`, `ds:${dest}`, 'delivers', 'idle');
+  }
+  const sink = node('sink', { kind: 'sink', col: 5, ref: 'â€”', name: 'No server trigger matches', type: 'dead end', side: 'server' });
+
+  for (const s of senders) {
+    const wt = node(`wtg:${s.tag.tagId}`, { kind: 'wtag', col: 1, ref: s.tag.tagId, name: s.tag.name, type: { data: 'Stape Data Tag', http: 'HTTP request', ga4: 'GA4 via server_container_url' }[s.transport], side: 'web' });
+    const firing = (s.tag.firingTriggerId ?? []).map(id => wTrig.get(id)?.name ?? ({ '2147479553': 'All Pages', '2147479572': 'Consent Initialization', '2147479573': 'Initialization' }[id] ?? id));
+    for (const id of s.tag.firingTriggerId ?? []) { node(`wtr:${id}`, { kind: 'wtrigger', col: 0, ref: id, name: wTrig.get(id)?.name ?? firing[0], type: wTrig.get(id)?.type ?? 'built-in trigger', side: 'web' }); edge(`wtr:${id}`, wt.id, 'fires', 'ok'); }
+    const ep = node(`ep:${s.host ?? 'unknown'}`, { kind: 'endpoint', col: 2, ref: s.host ?? '?', name: s.host ?? 'Unresolved endpoint', type: 'server container endpoint', side: 'edge' });
+    const { client, tied } = claim(clients, s);
+    const ev = node(`ev:${s.event ?? '?' + s.tag.tagId}`, { kind: 'event', col: 4, ref: s.event ?? s.rawEvent ?? '?', name: s.event ?? `${s.rawEvent ?? 'unknown'} (dynamic)`, type: 'event name', side: 'server' });
+    const route = { id: `r${routes.length}`, webTag: wt.id, webTriggers: (s.tag.firingTriggerId ?? []).map(id => `wtr:${id}`), firing, endpoint: ep.id, event: s.event, eventNode: ev.id, transport: s.transport,
+      client: client ? `cl:${client.c.clientId}` : null, matched: [], tags: [], destinations: [], status: 'unknown' };
+    if (!client || s.event == null) {
+      route.status = 'unknown';
+      route.reason = !client ? 'No server client of the right kind to claim this request.' : 'The event name is set at run time, so it cannot be matched statically.';
+    } else {
+      // When several clients could claim the request, a trigger is certain only if it matches for all of them.
+      for (const t of S.trigger ?? []) {
+        const rs = tied.map(x => evaluate(t, s.event, x.c.name, eventVars));
+        const r = rs.every(x => x === 'yes') ? 'yes' : rs.every(x => x === 'no') ? 'no' : 'maybe';
+        if (r !== 'no') route.matched.push({ id: `str:${t.triggerId}`, certainty: r });
+      }
+      const matched = new Map(route.matched.map(m => [m.id, m.certainty]));
+      for (const t of S.tag ?? []) {
+        if (t.paused) continue;
+        const hits = (t.firingTriggerId ?? []).map(id => matched.get(`str:${id}`)).filter(Boolean);
+        if (hits.length) route.tags.push({ id: `stg:${t.tagId}`, certainty: hits.includes('yes') ? 'yes' : 'maybe', destination: platformOf(S, t) });
+      }
+      route.destinations = [...new Set(route.tags.map(t => t.destination))];
+      route.status = route.tags.some(t => t.certainty === 'yes') ? 'delivered' : route.tags.length ? 'conditional' : 'dead-end';
+      if (tied.length > 1) route.reason = `${tied.map(x => x.c.name).join(' and ')} have the same priority, so which one claims the request is not certain. Triggers that check Client Name are marked uncertain.`;
+    }
+    const st = { delivered: 'ok', conditional: 'maybe', 'dead-end': 'dead', unknown: 'unknown' }[route.status];
+    edge(wt.id, ep.id, 'sends', st);
+    if (route.client) { edge(ep.id, route.client, 'routes', st); edge(route.client, ev.id, 'claims', st); }
+    else edge(ep.id, ev.id, 'routes', 'unknown');
+    for (const m of route.matched) edge(ev.id, m.id, 'matches', m.certainty === 'yes' && route.tags.length ? st : 'maybe');
+    if (route.status === 'dead-end') edge(ev.id, sink.id, 'matches', 'dead');
+    for (const t of route.tags) {
+      const fires = new Set((S.tag ?? []).find(x => `stg:${x.tagId}` === t.id)?.firingTriggerId ?? []);
+      for (const m of route.matched) if (fires.has(m.id.slice(4))) edge(m.id, t.id, 'fires', m.certainty === 'yes' && t.certainty === 'yes' ? st : 'maybe');
+      edge(t.id, `ds:${t.destination}`, 'delivers', t.certainty === 'yes' ? st : 'maybe');
+    }
+    routes.push(route);
+  }
+
+  // Findings drawn from the routes.
+  const findings = [];
+  const add = (severity, target, message, related = []) => { findings.push({ severity, target, message, related }); flag(nodes.get(target), severity, message); };
+  for (const r of routes.filter(r => r.status === 'dead-end')) {
+    const near = (S.trigger ?? []).filter(t => describeTrigger(t).toLowerCase().includes(String(r.event).toLowerCase().slice(0, 4))).map(t => t.name);
+    add('review', r.webTag, `Sends "${r.event}" to the server, but no server trigger matches that event name, so nothing is forwarded.${near.length ? ` Closest server trigger: ${near[0]}.` : ''}`, [r.eventNode]);
+    flag(nodes.get(r.eventNode), 'review', `No server trigger matches "${r.event}".`);
+  }
+  const reached = new Set(routes.flatMap(r => r.tags.map(t => t.id)));
+  for (const t of S.tag ?? []) {
+    const id = `stg:${t.tagId}`;
+    if (t.paused || reached.has(id)) continue;
+    const want = (t.firingTriggerId ?? []).map(x => sTrig.get(x)).filter(Boolean).map(x => `${x.name} (${describeTrigger(x)})`);
+    add('review', id, `No event from this web container reaches this tag. It waits for ${want.join(' or ') || 'no trigger'}, which no web tag sends. Events from other sources (apps, other containers) are not visible here.`);
+  }
+  const usedTriggers = new Set((S.tag ?? []).filter(t => !t.paused).flatMap(t => t.firingTriggerId ?? []));
+  const unusedHits = new Map();
+  for (const r of routes) for (const m of r.matched) if (m.certainty === 'yes' && !usedTriggers.has(m.id.slice(4))) unusedHits.set(m.id, new Set([...unusedHits.get(m.id) ?? [], r.event]));
+  for (const [id, evs] of unusedHits) add('info', id, `Matches ${[...evs].map(e => `"${e}"`).join(', ')} from the web container, but no active server tag uses this trigger.`);
+  // Several web tags firing on the same trigger and reaching the same server tag.
+  // Unfiltered page-load triggers (All Pages, DOM Ready, Window Loaded) all fire once per page view.
+  const pageLoad = id => ALL_PAGES.has(id) || ((t => t && ['PAGEVIEW', 'DOM_READY', 'WINDOW_LOADED'].includes(String(t.type).toUpperCase()) && !(t.filter ?? []).length && !(t.autoEventFilter ?? []).length)(wTrig.get(id)));
+  const moment = w => pageLoad(w.slice(4)) ? 'every page view' : `"${nodes.get(w).name}"`;
+  const byTag = new Map();
+  for (const r of routes.filter(r => r.status === 'delivered')) for (const t of r.tags.filter(t => t.certainty === 'yes')) for (const w of r.webTriggers) {
+    const k = `${t.id}|${moment(w)}`; byTag.set(k, [...byTag.get(k) ?? [], r]);
+  }
+  for (const [k, rs] of byTag) {
+    const [tagId, when] = [k.slice(0, k.indexOf('|')), k.slice(k.indexOf('|') + 1)], uniq = [...new Set(rs.map(r => r.webTag))];
+    if (uniq.length < 2) continue;
+    add('review', tagId, `Can fire ${uniq.length} times on ${when}: ${uniq.map(id => nodes.get(id).name).join(', ')} all reach it. Check they share an event ID so ${nodes.get(tagId).type} deduplicates.`, uniq);
+  }
+  for (const x of clients.filter(x => x.role === 'ga4' && !routes.some(r => r.client === `cl:${x.c.clientId}`))) add('info', `cl:${x.c.clientId}`, 'No web tag in this container sends GA4 traffic to this client.');
+
+  // Order rows in each column by the average row of what feeds them.
+  const list = [...nodes.values()], row = new Map(), cols = [...new Set(list.map(n => n.col))].sort((a, b) => a - b);
+  const inEdges = id => [...edges.values()].filter(e => e.to === id);
+  for (const c of cols) {
+    const col = list.filter(n => n.col === c);
+    const score = n => { const ps = inEdges(n.id).map(e => row.get(e.from)).filter(v => v != null); return ps.length ? ps.reduce((a, b) => a + b, 0) / ps.length : 1e6; };
+    col.map(n => [n, n.kind === 'sink' ? 2e6 : score(n)]).sort((a, b) => a[1] - b[1] || a[0].name.localeCompare(b[0].name)).forEach(([n], i) => { row.set(n.id, i); n.row = i; });
+  }
+  const count = s => routes.filter(r => r.status === s).length;
+  return {
+    meta: { name: `${W.container?.publicId ?? 'Web'} â†’ ${S.container?.publicId ?? 'Server'}`, publicId: 'Signal flow', context: 'web to server', paired: pairs(webSnap, serverSnap), hosts: [...new Set(senders.map(s => s.host).filter(Boolean))] },
+    columns: ['Web triggers', 'Web tags', 'Endpoint', 'Server clients', 'Events', 'Server triggers', 'Server tags', 'Destinations'],
+    nodes: list.sort((a, b) => a.col - b.col || a.row - b.row), edges: [...edges.values()], routes, findings,
+    summary: { routes: routes.length, delivered: count('delivered'), conditional: count('conditional'), dead: count('dead-end'), unknown: count('unknown'), orphans: findings.filter(f => f.message.startsWith('No event from')).length },
+  };
+}
